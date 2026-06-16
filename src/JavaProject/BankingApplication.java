@@ -2,7 +2,7 @@ package JavaProject;
 import java.util.*;
 
 class InavlidamountException extends Exception{
-    public InavlidamountException(String message){git remote remove origin
+    public InavlidamountException(String message){
         super(message);
     }
 }
