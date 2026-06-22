@@ -65,21 +65,21 @@ public class MovieTicketBookingSystem {
 
             Movie selectedMovie = null;
 
-            for(Movie m : movies) {
-                if(m.getMovieId() == movieId) {
+            for (Movie m : movies) {
+                if (m.getMovieId() == movieId) {
                     selectedMovie = m;
                     break;
                 }
             }
 
-            if(selectedMovie == null) {
+            if (selectedMovie == null) {
                 throw new InvalidSeatException("Movie Not Found!");
             }
 
             System.out.print("Enter Number of Seats: ");
             int seats = sc.nextInt();
 
-            if(seats <= 0) {
+            if (seats <= 0) {
                 throw new InvalidSeatException(
                         "Invalid Number Of Seats!"
                 );
@@ -95,18 +95,13 @@ public class MovieTicketBookingSystem {
             System.out.println("Seats : " + seats);
 
             System.out.println("Total Amount : ₹" + total);
-
         }
-
         catch(InvalidSeatException e) {
             System.out.println(e.getMessage());
         }
-
         finally {
             System.out.println("\nThank You For Booking!");
         }
-
         sc.close();
     }
 }
-
